@@ -73,7 +73,7 @@ class LiteBlogAPI
      */
     public function getPosts($limit = 100)
     {
-        return json_decode($this->getData($this->url . "/" . $this->version . "/" . $this->api_key . "/get/posts/" . $limit));
+        return json_decode($this->getData($this->url . "/" . $this->version . "/" . $this->api_key . "/get/posts/" . $limit))->payload;
     }
 
 
